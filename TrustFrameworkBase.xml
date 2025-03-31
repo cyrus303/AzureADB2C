@@ -335,7 +335,7 @@
       </ClaimType>
 
       <ClaimType Id="extension_radioSelect">
-        <DisplayName>Preferred App</DisplayName>
+        <DisplayName>Preferred Group</DisplayName>
         <DataType>string</DataType>
         <UserInputType>RadioSingleSelect</UserInputType>
         <Restriction>
@@ -611,6 +611,7 @@
             <OutputClaim ClaimTypeReferenceId="accountEnabled" />
             <OutputClaim ClaimTypeReferenceId="otherMails" />
             <OutputClaim ClaimTypeReferenceId="signInNames.emailAddress" />
+            <OutputClaim ClaimTypeReferenceId="extension_radioSelect" />
           </OutputClaims>
           <OutputClaimsTransformations>
             <OutputClaimsTransformation ReferenceId="AssertAccountEnabledIsTrue" />
@@ -676,6 +677,7 @@
             <OutputClaim ClaimTypeReferenceId="otherMails" />
             <OutputClaim ClaimTypeReferenceId="givenName" />
             <OutputClaim ClaimTypeReferenceId="surname" />
+            <OutputClaim ClaimTypeReferenceId="extension_radioSelect" />
           </OutputClaims>
           <IncludeTechnicalProfile ReferenceId="AAD-Common" />
         </TechnicalProfile>
@@ -757,7 +759,7 @@
             <OutputClaim ClaimTypeReferenceId="givenName" />
             <OutputClaim ClaimTypeReferenceId="surName" />
             <OutputClaim ClaimTypeReferenceId="extension_radioSelect" />
-            
+
           </OutputClaims>
           <ValidationTechnicalProfiles>
             <ValidationTechnicalProfile ReferenceId="AAD-UserWriteUsingLogonEmail" />
